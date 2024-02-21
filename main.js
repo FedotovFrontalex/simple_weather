@@ -4,12 +4,8 @@ import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
 import {geoService} from "./src/services/geoService/geoService.js";
 
-const getGeoLocation = async () => {
-	const result = await geoService.getLocation();
-	console.log(result);
-}
 const init = async () => {
-	const location = await getGeoLocation();
+	const location = await geoService.getLocation();
 }
 
 init();
