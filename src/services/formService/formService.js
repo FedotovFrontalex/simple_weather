@@ -5,6 +5,7 @@ export const formService = {
 			e.preventDefault();
 			const formData = new FormData(form);
 			submit(formData.get('city'));
+			form.reset();
 		})
 	}
 }
