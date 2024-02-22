@@ -2,3 +2,8 @@
   width: 100vw;
   height: 300px;
 }
+
+.weatherIcon {
+  width: 100px;
+  height: 100px;
+}
