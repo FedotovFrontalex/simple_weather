@@ -20,7 +20,7 @@ export const renderService = {
 
 		tempRealEl.innerHTML = `Температура воздуха ${weather.temp}`;
 
-		tempFeel.innerHTML = `Оцуцается, как ${weather.tempLike}`;
+		tempFeel.innerHTML = `Ощущается, как ${weather.tempLike}`;
 
 		container.appendChild(iconEl);
 		container.appendChild(descriptionEl);

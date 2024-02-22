@@ -14,6 +14,8 @@ export const storageService = {
 		const data = this.get();
 
 		if (isExistingValue(data, city)) {
+			const idx = data.findIndex((value) => value === city);
+			this.set([city, ...data.slice(0, idx), ...data.slice(idx+1)])
 			return;
 		}
 

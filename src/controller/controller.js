@@ -6,11 +6,11 @@ import {formService} from "../services/formService/formService.js";
 
 export const controller = {
 	initialize: async function(location) {
+		formService.initForm(this.inputCityHandler);
+		renderService.renderHistory();
 		mapService.updateMap(location);
 		const weather = await getWeatherByCoords(location);
 		renderService.renderWeather(weather);
-		formService.initForm(this.inputCityHandler)
-		renderService.renderHistory();
 	},
 	inputCityHandler: async function(city) {
 		const weather = await getWeather(city);
