@@ -1,8 +1,13 @@
 export const mapService = {
-	updateMap: (location) => {
+	mapContainer: null,
+	updateMap: function (location) {
+		const map = document.getElementById('map');
+		if (this.mapContainer) {
+			this.mapContainer.remove();
+		}
 		if (DG) {
-			DG.then(() => {
-				DG.map('map', {
+			DG.then((arg) => {
+				this.mapContainer = DG.map('map', {
 					center: [location.lat, location.long],
 					zoom: 13,
 					dragging : false,
